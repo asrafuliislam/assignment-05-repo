@@ -1,10 +1,12 @@
-const cards = document.getElementsByClassName("Call-btn");
-const card_id = document.getElementById("Coin");
 
-let value = parseInt(card_id.textContent);
+// call  & coin
+const calls = document.getElementsByClassName("Call-btn");
+const coin_id = document.getElementById("Coin");
+
+let value = parseInt(coin_id.textContent);
 let save_data = []; 
 
-for (let card of cards) {
+for (let card of calls) {
   card.addEventListener('click', function(e) {
     e.preventDefault();
 
@@ -19,7 +21,7 @@ for (let card of cards) {
     let message_number = parentCard.querySelector(".message-number").textContent;
 
     value -= 20;
-    card_id.textContent = value;
+    coin_id.textContent = value;
 
     alert("📞 " + message_value + " " + message_number);
 
